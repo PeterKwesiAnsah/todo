@@ -9,9 +9,12 @@
 	--secondaryDark: #4d4d4d;
 	--secondaryLightDark: #777;
 	--secondaryLight: #f5f5f5;
-  --white:#fff;
-  --placeHolderText:#80808061;
-  --boxShadowColor:#88888838
+	--white: #fff;
+	--placeHolderText: #80808061;
+	--boxShadowColor: #88888838;
+	--taskBottom: #ededed;
+	--unChecked: #ededed;
+	--checked: #4caf5066;
 }
 html {
 	height: 100%;

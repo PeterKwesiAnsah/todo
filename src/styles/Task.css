@@ -1,0 +1,27 @@
+.task {
+	width: 100%;
+	display: flex;
+    align-items: center;
+	background-color: var(--white);
+	border-top: 1px solid var(--taskBottom);
+    font-size: 24px;
+    padding: 12px;
+}
+.task__checkBox {
+	height: 32px;
+	width: 32px;
+	border: 1px solid var(--unChecked);
+	border-radius: 50%;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todos {
+	width: 100%;
+}
+.task__check{
+    fill:var(--checked);
+    width: 25px;
+    height: 25px;
+}
