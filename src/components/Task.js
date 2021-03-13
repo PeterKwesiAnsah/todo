@@ -2,17 +2,24 @@ import React, { useState } from 'react';
 import '../styles/Task.css';
 import { ReactComponent as Check } from '../assets/check-solid-svgrepo-com.svg';
 import { ReactComponent as Cross } from '../assets/cross-svgrepo-com.svg';
+import findAndUpdate from '../utils/findAndUpdateOne';
+import findAndRemove from '../utils/findAndRemoveOne';
 
-const Task = ({ task }) => {
+const Task = ({ task, updateTodos, todoData }) => {
+	//will use the task field
+	const { id, completed, active } = task;
 
-    //will use the task field
-    
 	//states for check boss
-	const [completed, setCompleted] = useState(false);
 
 	//toggles between check and uncheck
 	const handleCheck = () => {
-		setCompleted(!completed);
+		//find the task in todos,change the state of completed and update the state
+		findAndUpdate(todoData, id, updateTodos);
+		// setCompleted(!completed);
+	};
+	const handleRemoveTask = () => {
+		//remove Task
+		findAndRemove(todoData, id, updateTodos);
 	};
 
 	//retrieve task data
@@ -30,7 +37,7 @@ const Task = ({ task }) => {
 				<p className={completed ? 'task__crossThrough' : ''}>{content}</p>
 			</div>
 			<>
-				<Cross className="task__cross"></Cross>
+				<Cross className="task__cross" onClick={handleRemoveTask}></Cross>
 			</>
 		</div>
 	);

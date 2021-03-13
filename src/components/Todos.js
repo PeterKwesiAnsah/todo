@@ -1,27 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Task from './Task';
 import '../styles/Task.css';
 import Toolbar from '../components/Toolbar';
 import filter from '../utils/filter';
 
-const Todos = ({ todoData }) => {
+const Todos = ({ todoData, updateTodos }) => {
 	//state to filter out todos
-	const [filter, setFilter] = useState('All');
+	const [filterString, setFilterString] = useState('All');
 
-	//get count of actie tasks
+	//get count of active tasks
 	const count = filter(todoData, 'Active').length;
 
-	const task = {
-		content: 'Go to the Market',
-		active: true,
-		completed: false,
-	};
+	//filter based on filterString
+	const filteredTodos = filter(todoData, filterString);
+
+	//renderTodos
+	const renderTodos = filteredTodos.map((task) => (
+		<Task
+			key={task.id}
+			task={task}
+			updateTodos={updateTodos}
+			todoData={todoData}
+		></Task>
+	));
 	return (
 		<>
 			<div className="todos">
-				<Task task={task}></Task>
+				<Fragment>{renderTodos}</Fragment>
 			</div>
-			<Toolbar setFilter={setFilter} filter={filter}></Toolbar>
+			<Toolbar
+				setFilterString={setFilterString}
+				filterString={filterString}
+				count={count}
+			></Toolbar>
 		</>
 	);
 };

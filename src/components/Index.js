@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import '../styles/Index.css';
 import Todos from '../components/Todos';
+import { nanoid } from 'nanoid';
 
 const Index = () => {
 	//init states to handle todo Operations
@@ -14,11 +15,23 @@ const Index = () => {
 	//     active:true,
 	//     completed:false,
 	// }
+    console.log(todos)
 
 	//creates todo
 	const createTodo = ({ key }) => {
 		if (key === 'Enter') {
 			if (task) {
+				//add a task
+				setTodos([
+					...todos,
+					{
+						id: nanoid(),
+						content: task,
+						active: true,
+						completed: false,
+					},
+				]);
+
 				//clear input value
 				setTask('');
 			}
@@ -45,7 +58,7 @@ const Index = () => {
 					onChange={handleChange}
 				></input>
 			</div>
-			<Todos todoData={todos}></Todos>
+			{todos.length > 0 && <Todos todoData={todos} updateTodos={setTodos}></Todos>}
 		</>
 	);
 };
