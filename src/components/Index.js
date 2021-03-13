@@ -9,13 +9,7 @@ const Index = () => {
 
 	const [task, setTask] = useState('');
 
-	// {
-	//     id:id,
-	//     content:'',
-	//     active:true,
-	//     completed:false,
-	// }
-    console.log(todos)
+
 
 	//creates todo
 	const createTodo = ({ key }) => {

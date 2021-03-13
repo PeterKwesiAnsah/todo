@@ -32,6 +32,8 @@ const Todos = ({ todoData, updateTodos }) => {
 				setFilterString={setFilterString}
 				filterString={filterString}
 				count={count}
+				updateTodos={updateTodos}
+				todoData={todoData}
 			></Toolbar>
 		</>
 	);

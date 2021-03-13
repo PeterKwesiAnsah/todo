@@ -1,7 +1,14 @@
 import React from 'react';
 import '../styles/Toolbar.css';
+import findAndRemoveAll from '../utils/findAndRemoveAll';
 
-const Toolbar = ({ setFilterString, filterString, count }) => {
+const Toolbar = ({
+	setFilterString,
+	filterString,
+	count,
+	todoData,
+	updateTodos,
+}) => {
 	const handleAction = ({ target }) => {
 		//get text content from event triggered elememt
 		const filter = target.textContent;
@@ -10,6 +17,10 @@ const Toolbar = ({ setFilterString, filterString, count }) => {
 			//set a new filter state
 			setFilterString(filter);
 		}
+	};
+	const handleClearAction = () => {
+		//clear all completed tasks
+		findAndRemoveAll(todoData, updateTodos);
 	};
 	return (
 		<div className="toolbar">
@@ -21,7 +32,9 @@ const Toolbar = ({ setFilterString, filterString, count }) => {
 				<span className="toolbar__btn">Active</span>
 				<span className="toolbar__btn">Completed</span>
 			</div>
-			<span className="toolbar__clearBtn">Clear Completed</span>
+			<span className="toolbar__clearBtn" onClick={handleClearAction}>
+				Clear Completed
+			</span>
 		</div>
 	);
 };

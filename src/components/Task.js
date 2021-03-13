@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Task.css';
 import { ReactComponent as Check } from '../assets/check-solid-svgrepo-com.svg';
 import { ReactComponent as Cross } from '../assets/cross-svgrepo-com.svg';
@@ -7,7 +7,7 @@ import findAndRemove from '../utils/findAndRemoveOne';
 
 const Task = ({ task, updateTodos, todoData }) => {
 	//will use the task field
-	const { id, completed, active } = task;
+	const { id, completed } = task;
 
 	//states for check boss
 
