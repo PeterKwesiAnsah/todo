@@ -1,27 +1,54 @@
 .task {
 	width: 100%;
 	display: flex;
-    align-items: center;
+	align-items: center;
 	background-color: var(--white);
 	border-top: 1px solid var(--taskBottom);
-    font-size: 24px;
-    padding: 12px;
+	font-size: 24px;
+	padding: 14px;
+	justify-content: space-between;
 }
+
 .task__checkBox {
 	height: 32px;
 	width: 32px;
 	border: 1px solid var(--unChecked);
 	border-radius: 50%;
-    margin-right: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	margin-right: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+.task > p {
+	transition: color 0.4s;
+}
+
+.task__crossThrough {
+	color: var(--crossThrough);
+	text-decoration: line-through;
+}
+
 .todos {
 	width: 100%;
 }
-.task__check{
-    fill:var(--checked);
-    width: 25px;
-    height: 25px;
+.task__check {
+	fill: var(--checked);
+	width: 25px;
+	height: 25px;
+}
+.task__cross {
+	width: 12px;
+	height: 12px;
+	margin-top: -10px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.4s;
+	fill: var(--cross);
+}
+.task__box {
+	display: flex;
+	align-items: center;
+}
+.task:hover .task__cross {
+	opacity: 1;
 }

@@ -14,7 +14,10 @@
 	--boxShadowColor: #88888838;
 	--taskBottom: #ededed;
 	--unChecked: #ededed;
-	--checked: #4caf5066;
+	--checked: #80f580;
+	--checkedLight: #c9f7c9;
+	--crossThrough: #d9d9d9;
+	--cross: #cc9a9a;
 }
 html {
 	height: 100%;
