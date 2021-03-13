@@ -4,7 +4,7 @@ import Todos from '../components/Todos';
 
 const Index = () => {
 	//init states to handle todo Operations
-	const [todo, setTodo] = useState([]);
+	const [todos, setTodos] = useState([]);
 
 	const [task, setTask] = useState('');
 
@@ -45,7 +45,7 @@ const Index = () => {
 					onChange={handleChange}
 				></input>
 			</div>
-			<Todos></Todos>
+			<Todos todoData={todos}></Todos>
 		</>
 	);
 };

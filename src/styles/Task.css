@@ -7,6 +7,7 @@
 	font-size: 24px;
 	padding: 14px;
 	justify-content: space-between;
+    border-bottom: 1px solid var(--taskBottom);
 }
 
 .task__checkBox {
@@ -18,6 +19,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 }
 .task > p {
 	transition: color 0.4s;

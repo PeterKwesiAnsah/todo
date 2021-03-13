@@ -4,6 +4,9 @@ import { ReactComponent as Check } from '../assets/check-solid-svgrepo-com.svg';
 import { ReactComponent as Cross } from '../assets/cross-svgrepo-com.svg';
 
 const Task = ({ task }) => {
+
+    //will use the task field
+    
 	//states for check boss
 	const [completed, setCompleted] = useState(false);
 
