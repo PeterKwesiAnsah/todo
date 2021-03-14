@@ -40,6 +40,7 @@
 	height: 5px;
 	background-color: var(--white);
 	border: 1px solid var(--taskBottom);
+	box-shadow: 6px 30px 60px var(--boxShadowColor);
 }
 .toolbar__footer--1 {
 	width: 99%;

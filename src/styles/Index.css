@@ -1,5 +1,6 @@
 .input__box {
 	width: 100%;
+	box-shadow: 6px 30px 60px var(--boxShadowColor);
 }
 
 .input {

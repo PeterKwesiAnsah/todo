@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Toolbar.css';
-import filter from '../utils/filter';
 import findAndRemoveAll from '../utils/findAndRemoveAll';
 
 const Toolbar = ({
