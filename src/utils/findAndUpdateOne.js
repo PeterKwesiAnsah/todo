@@ -1,4 +1,4 @@
-const findAndUpdateOne = (data, taskID, fn, content) => {
+const findAndUpdateOne = (data, taskID, fn, content = '') => {
 	const newMutableData = [...data];
 
 	//find the corresponding task with taskID
@@ -8,7 +8,9 @@ const findAndUpdateOne = (data, taskID, fn, content) => {
 		task.content = content;
 		//update the state with Changes
 		fn(newMutableData);
+		return;
 	}
+
 	//update detailts
 	task.completed = !task.completed;
 	task.active = !task.active;

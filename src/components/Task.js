@@ -55,6 +55,7 @@ const Task = ({ task, updateTodos, todoData }) => {
 					value={edit.content}
 					onChange={handleTaskEdit}
 					onKeyUp={handleSubmitChanges}
+					autoFocus
 				></input>
 			) : (
 				<>

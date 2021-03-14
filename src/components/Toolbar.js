@@ -31,7 +31,7 @@ const Toolbar = ({
 	return (
 		<>
 			<div className="toolbar">
-				<span className="toolbar__count" name="toolbarCount">
+				<span className="toolbar__count">
 					{count > 0 ? count + ' items' : count + ' item'} Left
 				</span>
 				<div className="toolbar__actions" onClick={handleAction}>
