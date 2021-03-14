@@ -59,8 +59,8 @@ const Toolbar = ({
 					Clear Completed
 				</span>
 			</div>
-			<div className="toolbar__footer--1"></div>
-			<div className="toolbar__footer--2"></div>
+			<div className="toolbar__footer toolbar__footer--1"></div>
+			<div className="toolbar__footer toolbar__footer--2"></div>
 		</>
 	);
 };

@@ -23,7 +23,7 @@
 	border: 1px solid var(--tertiaryLight--1);
 }
 .toolbar__actions > * {
-	margin-right: 13px;
+	margin-right: 11px;
 }
 .toolbar__clearBtn {
 	cursor: pointer;
@@ -35,4 +35,15 @@
 
 .active {
 	border: 1px solid var(--tertiaryLight);
+}
+.toolbar__footer {
+	height: 5px;
+	background-color: var(--white);
+	border: 1px solid var(--taskBottom);
+}
+.toolbar__footer--1 {
+	width: 99%;
+}
+.toolbar__footer--2 {
+	width: 97%;
 }
