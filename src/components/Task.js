@@ -5,6 +5,7 @@ import { ReactComponent as Cross } from '../assets/cross-svgrepo-com.svg';
 import findAndUpdate from '../utils/findAndUpdateOne';
 import findAndRemove from '../utils/findAndRemoveOne';
 
+
 const Task = ({ task, updateTodos, todoData }) => {
 	//will use the task field
 	const { id, completed, content } = task;
@@ -31,8 +32,16 @@ const Task = ({ task, updateTodos, todoData }) => {
 		setEdit({ ...edit, content: target.value });
 	};
 
-	const handleSubmitChanges=()=>{
-		
+	const handleSubmitChanges=({key})=>{
+		if(key==='Enter'){
+			if(edit.content){
+				//set editable to false
+
+				//edit task
+			}
+
+		}
+
 	}
 
 	return (
