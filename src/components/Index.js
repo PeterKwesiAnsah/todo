@@ -50,6 +50,7 @@ const Index = () => {
 					placeholder="what needs to be done?"
 					value={task}
 					onChange={handleChange}
+					autoFocus
 				></input>
 			</div>
 			{todos.length > 0 && <Todos todoData={todos} updateTodos={setTodos}></Todos>}

@@ -13,15 +13,14 @@
 }
 .toolbar__btn {
 	cursor: pointer;
-    padding: 3px 6px;
+	padding: 3px 6px;
 	border-radius: 2px;
-    transition: color .4s;
-    backface-visibility: hidden;
-    border: 1px solid var(--white);
+	transition: color 0.4s;
+	backface-visibility: hidden;
+	border: 1px solid var(--white);
 }
 .toolbar__btn:hover {
- 
-    border: 1px solid var(--tertiaryLight--1);
+	border: 1px solid var(--tertiaryLight--1);
 }
 .toolbar__actions > * {
 	margin-right: 13px;
@@ -32,4 +31,8 @@
 
 .toolbar__clearBtn:hover {
 	text-decoration: underline;
+}
+
+.active {
+	border: 1px solid var(--tertiaryLight);
 }
